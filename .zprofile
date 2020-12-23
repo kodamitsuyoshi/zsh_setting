@@ -3,20 +3,23 @@
 #export  MACHINE_STORAGE_PATH="/Volumes/KodaSSD/workdir/.docker/machine"
 #export PATH="$PATH:$HOME/.cargo/bin"
 
-#export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 
-
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH=${PATH}:${PYENV_ROOT}/shims
-#export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=${PATH}:${PYENV_ROOT}/shims
+export PATH="$PYENV_ROOT/bin:$PATH"
 #export PATH=$HOME/.composer/vendor/bin:$PATH
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-#export PATH="/usr/local/sbin:$PATH"
+#exec "$SHELL"
+
+#if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH="/usr/local/sbin:$PATH"
 
 
 #PROMPT='
